@@ -14,31 +14,31 @@ int main(int argc, char *argv[]) {
 	printf(" 3: Gousmas War\n");
 	printf(" 4: Sair\n\n");
 	
-	scanf("  %d",&esc);
+	scanf("%d",&esc);
 	
 	
-	if (esc = 1);{
+	if (esc == 1){
 	
 		system("cls");
 		printf("\t\t Pergunta e Resposta");
 	
 	}
 	
-	if (esc = 2);{
+	if (esc == 2){
 	
 		system("cls");
 		printf("\t\t Cobra na Caixa!");
 	
 	}
 
-	if (esc = 3);{
+	if (esc == 3){
 	
 		system("cls");
 		printf("\t\t Gousmas War");
 	
 	}
 
-	if (esc = 4);{
+	if (esc == 4){
 	
 		exit(EXIT_SUCCESS);
 	}	
