@@ -35,5 +35,13 @@ int main() {
         time(&final);
         diferenca = difftime(final, inicio);
     }
+        if(diferenca == 2.00000) {
+        printf(" ____\n");
+        printf("|___ | \n"); 
+        printf("  __) |\n");
+        printf(" |__ < \n");
+        printf(" ___) |\n");
+        printf("|____/ \n");  
+    }
     return 0;
 }
