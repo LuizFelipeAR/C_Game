@@ -165,7 +165,83 @@ else if (tecla == 'b' || tecla == 'B') {
      }
 
 }
+// Comando acima foi a Segunda Questao.
+if (diferenca == 3.0) {
+printf(" \t\t\tPergunta e Resposta!");
+}
 
+
+time_t t1p3, t2p3;
+double diferenca1;
+
+
+if (diferenca == 3.0) {
+	printf("\n3. Nome do atual reitor do CESUPA? \n");
+printf("a) Carlos Augusto Barata Monteiro\n");
+printf("b) Raimundo Alberto Pacheco Tavares \n");
+printf("c) Sergio Fiuza de Mello Mendes \n");
+printf("d) Fernando Luiz Batista de Oliveira \n");
+printf("e) Marcelo Antonio Guimaraes da Costa \n");
+tecla = getch();
+}
+if (tecla == 'e' || tecla == 'E') {
+	time(&t1p3);
+    printf("\nResposta correta!");
+    pont += 1;
+    while (diferenca1 < 3.00000) {
+    time(&t2p3);
+    diferenca1 = difftime(t2p3, t1p3);
+}
+
+    if (diferenca1 == 3.00000) {
+        	system("cls");
+     }
+}
+else if (tecla == 'a' || tecla == 'A') {
+	time(&t1p3);
+    printf("\nResposta incorreta!");
+    while (diferenca1 < 3.00000) {
+    time(&t2p3);
+    diferenca1 = difftime(t2p3, t1p3);
+}
+    if (diferenca1 == 3.00000) {
+        system("cls");
+     }
+}
+else if (tecla == 'e' || tecla == 'E') {
+	time(&t1p3);
+    printf("\nResposta incorreta!");
+     while (diferenca1 < 3.00000) {
+    time(&t2p3);
+    diferenca1 = difftime(t2p3, t1p3);
+}
+    if (diferenca1 == 3.00000) {
+        system("cls");
+     }
+}
+else if (tecla == 'd' || tecla == 'D') {
+	time(&t1p3);
+    printf("\nResposta incorreta!");
+     while (diferenca1 < 3.00000) {
+    time(&t2p3);
+    diferenca1 = difftime(t2p3, t1p3);
+}
+    if (diferenca1 == 3.00000) {
+        system("cls");
+     }
+}
+else if (tecla == 'b' || tecla == 'B') {
+	time(&t1p3);
+    printf("\n Resposta incorreta!");
+     while (diferenca1 < 3.00000) {
+    time(&t2p3);
+    diferenca1 = difftime(t2p3, t1p3);
+}
+    if (diferenca1 == 3.00000) {
+        system("cls");
+     }
+
+}
 
 
 
