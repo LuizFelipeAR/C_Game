@@ -85,12 +85,75 @@ else if (tecla == 'e' || tecla == 'E') {
 
 // Comando acima foi a Primeira Questao.
 
+printf(" \t\t\tPergunta e Resposta!");
+
+
 time_t t1p2, t2p2;
+double diferenca;
+
+time(&t1p2);
 
 if (tempo == 3.0) {
-	printf("9okmknl'knmk;nm");
+	printf("\n2. Nome do fundador do CESUPA? \n");
+printf("a) Antonio Carlos Ferreira de Barros\n");
+printf("b) Luiz Augusto Monteiro Pacheco \n");
+printf("c) Joao Vittor Carvalho Pereira \n");
+printf("d) Raimundo Nonato da Silva Guimaraes \n");
+printf("e) Joao Paulo do Valle Mendes \n");
+tecla = getch();
 }
+if (tecla == 'e' || tecla == 'E') {
+    printf("\nResposta correta!");
+    pont += 1;
+    while (diferenca < 3.00000) {
+    time(&t2p2);
+    diferenca = difftime(t2p2, t1p2);
+}
+    if (diferenca == 3.00000) {
+        	system("cls");
+     }
+}
+else if (tecla == 'a' || tecla == 'A') {
+    printf("\nResposta incorreta!");
+    while (diferenca < 3.00000) {
+    time(&t2p2);
+    diferenca = difftime(t2p2, t1p2);
+}
+    if (diferenca == 3.00000) {
+        system("cls");
+     }
+}
+else if (tecla == 'c' || tecla == 'C') {
+    printf("\nResposta incorreta!");
+     while (diferenca < 3.00000) {
+    time(&t2p2);
+    diferenca = difftime(t2p2, t1p2);
+}
+    if (diferenca == 3.00000) {
+        system("cls");
+     }
+}
+else if (tecla == 'd' || tecla == 'D') {
+    printf("\nResposta incorreta!");
+     while (diferenca < 3.00000) {
+    time(&t2p2);
+    diferenca = difftime(t2p2, t1p2);
+}
+    if (diferenca == 3.00000) {
+        system("cls");
+     }
+}
+else if (tecla == 'b' || tecla == 'B') {
+    printf("\n Resposta incorreta!");
+     while (diferenca < 3.00000) {
+    time(&t2p2);
+    diferenca = difftime(t2p2, t1p2);
+}
+    if (diferenca == 3.00000) {
+        system("cls");
+     }
 
+}
 
 
 
