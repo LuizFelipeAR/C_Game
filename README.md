@@ -1,11 +1,11 @@
 # C_Game
 
-### Dupla: Luiz Felipe Araujo dos Reis, Pedro Arthur Farias de Souza
+### Contribuidores: Luiz Felipe Araujo dos Reis, Pedro Arthur Farias de Souza.
 
 # Sobre o jogo
-- Sao 3 minigames integrados dentro de um jogo
-1. O primeiro jogo é de perguntas e respostas simples, cada pergunta possui 4 opções de resposta, sendo apenas uma a correta.
-2. O segundo jogo se chama "Cobra na Caixa". São várias caixas dispostas e em um caixa há uma cobra e em outra tem um botão, as demais estão vazias. Se o jogador selecionar a caixa com a cobra ele perde, se selecionar a com o botão, ele vence. Caso o jogador selecionar uma caixa vazia, essa caixa ficará aberta, eliminando uma opção de escolha.
+- O jogo consiste em três mini-games:
+1. O primeiro jogo é um perguntas e respostas simples, cada pergunta possui 4 opções de resposta, sendo apenas uma a correta.
+2. O segundo jogo se chama "Cobra na Caixa". São cinco caixas dispostas e em um caixa há uma cobra e em outra há um botão, as demais estão vazias. Se o jogador selecionar a caixa com a cobra ele perde, se selecionar a com o botão, ele vence. Caso o jogador selecionar uma caixa vazia, essa caixa ficará aberta, eliminando uma opção de escolha.
 3. O terceiro jogo se chama "Gousmas War"...
 
 # 💻 Programming Language: 
@@ -25,13 +25,15 @@
 4. D
 5. E
 
-## 📚 What I practiced
+## 📚 O que foi praticado
 
-- Variables
-- User input (`scanf`)
-- Print text (`printf`)
-- Basic arithmetic operations
-- Console input/output in C
+- Variavies
+- Input (`scanf`)
+- Print (`printf`)
+- Laço de seleção (`if`) e (`else`)
+- Temporizadores 
+- Console input/output em C
+- Laço de repetição (`while`) e (`for`)
 
 ## Interface Language 🌐
 
