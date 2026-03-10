@@ -15,9 +15,9 @@ int main() {
     printf(" | |\n");
     printf(" |_|\n");
 
-    time(&inicio);
 
-    while(diferenca < 1.00000) {
+    while(diferenca < 1.0000) {
+        time(&inicio);
         time(&final);
         diferenca = difftime(final, inicio);
     }
