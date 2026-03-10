@@ -104,7 +104,7 @@ double diferenca;
 
 
 if (tempo == 3.0) {
-	printf("\n2. Nome do fundador do CESUPA? \n");
+	printf("\n2. Qual o nome do fundador do CESUPA? \n");
 printf("a) Antonio Carlos Ferreira de Barros\n");
 printf("b) Luiz Augusto Monteiro Pacheco \n");
 printf("c) Joao Vittor Carvalho Pereira \n");
@@ -188,7 +188,7 @@ while(kbhit()){
 }
 
 if (diferenca == 3.0) {
-	printf("\n3. Nome do atual reitor do CESUPA? \n");
+	printf("\n3. Qualo o nome do atual reitor do CESUPA? \n");
 printf("a) Carlos Augusto Barata Monteiro\n");
 printf("b) Raimundo Alberto Pacheco Tavares \n");
 printf("c) Sergio Fiuza de Mello Mendes \n");
@@ -273,7 +273,7 @@ while(kbhit()){
 }
 
 if (diferenca1 == 3.0) {
-	printf("\n4. Qual o nome do professor de Algoritmo? \n");
+	printf("\n4. Qual o nome do professor de Algoritmos? \n");
 printf("a) Pedro Girotto\n");
 printf("b) Alessandra Natasha \n");
 printf("c) Ricardo Casseb \n");
