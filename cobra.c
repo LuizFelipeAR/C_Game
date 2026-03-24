@@ -14,257 +14,62 @@ sleep(4);
 printf("Em outra caixa ha uma cobra que vai MATAR voces!!!!!!\n");
 sleep(2);
 printf("Mas nas outras caixas nao tem nada nao =D\nBoa Sorte!\n\n");
-sleep(3);
+sleep(2);
 
 printf("\n\nJogador 1, Escolha um nome:\n");
 printf("1) Alan\n2) Linus\n3) Steve\n4) Ada\n5) Neumann\n6) Ze-Valim\n7) Rob-Ieru\n\nDigite o numero correspondente ao nome escolhido:\n");
 
-int alan1=11,linus2=12,steve3=13,ada4=14,neumann5=15,ze6=16,rob7=17;
-//'nmu' eh nome um, 'nmd' eh nome dois kkkk 
-int nmu,nmd;
-//'nmju' eh nome do jogador 1 e 'nmjd' eh nome do jogador 2
-char nmju[20];
-char nmjd[20];
+//array de strings com os nomes dos personagens
+char nomes[7][20] = {"Alan","Linus","Steve","Ada","Neumann","Ze-Valim","Rob-Ieru"};
+int pick1, pick2;
+char jogador1[20];
+char jogador2[20];
 
 
-scanf("%d", &nmu);
-// tudo sobre a selecao de personagem aqui abaixo
-
-
-
-//personagem alan turing e jogador 2
-if (nmu == 1){
-	nmu = alan1;
-	strcpy(nmju, "Alan");
-	printf("jogador 1 escolheu ALAN!");
-	sleep(1);
-	system("cls");
-	
-		printf("Jogador 2, Escolha um nome:\n");
-		printf("\n2) Linus\n3) Steve\n4) Ada\n5) Neumann\n6) Ze-Valim\n7) Rob-Ieru\n\nDigite o numero correspondente ao nome escolhido:\n");
-		scanf("%d", &nmd);
-		
-		if(nmd == 2){
-		strcpy(nmjd, "Linus");
-		}
-		if(nmd == 3){
-		strcpy(nmjd, "Steve");
-		}
-		if(nmd == 4){
-		strcpy(nmjd, "Ada");
-		}
-		if(nmd == 5){
-		strcpy(nmjd, "Neumann");
-		}
-		if(nmd == 6){
-		strcpy(nmjd, "Ze-Valim");
-		}
-		if(nmd == 7){
-		strcpy(nmjd, "Rob-Ieru");
-		}
-		
+while(1){ //aqui eu to criando um loop infinito que so eh break (quebrado) quando o numero escolhido ta entre os que podem ser escolhidos
+	scanf("%d", &pick1);
+		if (pick1 >= 1 && pick1 <= 7) {
+        break;
+    }
+		else {
+        printf("Numero invalido! Digite um numero correspondente a um dos nomes acima:\n");
+    }
 }
 
-//personagem linus torvalds e jogador 2
-if (nmu == 2){
-	nmu = linus2;
-	 strcpy(nmju, "Linus");
-	printf("jogador 1 escolheu LINUS!");
-	sleep(1);
-	system("cls");
-	
-		printf("Jogador 2, Escolha um nome:\n");
-		printf("\n1) Alan\n3) Steve\n4) Ada\n5) Neumann\n6) Ze-Valim\n7) Rob-Ieru\n\nDigite o numero correspondente ao nome escolhido:\n");
-		scanf("%d", &nmd);
-		
-		if(nmd == 1){
-		strcpy(nmjd, "Alan");
-		}
-		if(nmd == 3){
-		strcpy(nmjd, "Steve");
-		}
-		if(nmd == 4){
-		strcpy(nmjd, "Ada");
-		}
-		if(nmd == 5){
-		strcpy(nmjd, "Neumann");
-		}
-		if(nmd == 6){
-		strcpy(nmjd, "Ze-Valim");
-		}
-		if(nmd == 7){
-		strcpy(nmjd, "Rob-Ieru");
-		}
-	
-}
+strcpy(jogador1, nomes[pick1-1]); //tem que ser -1 porque um array comeca sempre no 0 e nao no 1 =)
+//strcpy = string copy, eu to copiando o uma das strings do array de nomes pra dentro da variavel jogador1, eu to escolhendo o numero correspodente a posiçao do nome dentro do array de strings
+system("cls||clear");
 
-//personagem steve jobs e jogador 2
-if (nmu == 3){
-	nmu = steve3;
-	strcpy(nmju, "Steve");
-	printf("jogador 1 escolheu STEVE");
-	sleep(1);
-	system("cls");
-	
-		printf("Jogador 2, Escolha um nome:\n");
-		printf("\n1) Alan\n2) Linus\n4) Ada\n5) Neumann\n6) Ze-Valim\n7) Rob-Ieru\n\nDigite o numero correspondente ao nome escolhido:\n");
-		scanf("%d", &nmd);
-		
-		if(nmd == 1){
-		strcpy(nmjd, "Alan");
-		}
-		if(nmd == 2){
-		strcpy(nmjd, "Linus");
-		}
-		if(nmd == 4){
-		strcpy(nmjd, "Ada");
-		}
-		if(nmd == 5){
-		strcpy(nmjd, "Neumann");
-		}
-		if(nmd == 6){
-		strcpy(nmjd, "Ze-Valim");
-		}
-		if(nmd == 7){
-		strcpy(nmjd, "Rob-Ieru");
-		}
-	
-}
 
-//personagem Ada Lovelance e jogador 2
-if (nmu == 4){
-	nmu = ada4;
-	strcpy(nmju, "Ada");
-	printf("jogador 1 escolheu ADA!");
-	sleep(1);
-	system("cls");
-	
-		printf("Jogador 2, Escolha um nome:\n");
-		printf("\n1) Alan\n2) Linus\n3) Steve\n5) Neumann\n6) Ze-Valim\n7) Rob-Ieru\n\nDigite o numero correspondente ao nome escolhido:\n");
-		scanf("%d", &nmd);
-	
-		if(nmd == 1){
-		strcpy(nmjd, "Alan");
-		}
-		if(nmd == 2){
-		strcpy(nmjd, "Linus");
-		}
-		if(nmd == 3){
-		strcpy(nmjd, "Steve");
-		}
-		if(nmd == 5){
-		strcpy(nmjd, "Neumann");
-		}
-		if(nmd == 6){
-		strcpy(nmjd, "Ze-Valim");
-		}
-		if(nmd == 7){
-		strcpy(nmjd, "Rob-Ieru");
-		}
-	
+printf("\nJogador 2 escolha:\n");
+int i = 0;
+//i serve pra contagem
+while (i < 7) {
+    if (i != pick1 - 1) {
+        printf("%d) %s\n", i + 1, nomes[i]);
+    }
+    i++;
 }
+//esse while 'le' as alternativas dentro do array de strings e entao confere se o pick1 ja foi escolhi e printa so os que ainda nao foram escolhidos
 
-//personagem John Von Neumann e jogador 2
-if (nmu == 5){
-	nmu = neumann5;
-	strcpy(nmju, "Neumann");
-	printf("jogador 1 escolheu NEUMANN!");
-	sleep(1);
-	system("cls");
-	
-		printf("Jogador 2, Escolha um nome:\n");
-		printf("\n1) Alan\n2) Linus\n3) Steve\n4) Ada\n6) Ze-Valim\n7) Rob-Ieru\n\nDigite o numero correspondente ao nome escolhido:\n");
-		scanf("%d", &nmd);
-	
-		if(nmd == 1){
-		strcpy(nmjd, "Alan");
-		}
-		if(nmd == 2){
-		strcpy(nmjd, "Linus");
-		}
-		if(nmd == 3){
-		strcpy(nmjd, "Steve");
-		}
-		if(nmd == 4){
-		strcpy(nmjd, "Ada");
-		}
-		if(nmd == 6){
-		strcpy(nmjd, "Ze-Valim");
-		}
-		if(nmd == 7){
-		strcpy(nmjd, "Rob-Ieru");
-		}
-	
+
+while(1){ //aqui eu to criando um loop infinito que so eh break (quebrado) quando o numero escolhido ta entre os que podem ser escolhidos
+scanf("%d", &pick2);
+ if (pick2 >= 1 && pick2 <= 7 && pick2 != pick1) {
+        break;
+    } else {
+        printf("Numero invalido ou nome ja escolhido! Digite novamente:\n");
+    }
 }
+strcpy(jogador2, nomes[pick2 - 1]);
 
-//personagem Jose Valim e jogador 2
-if (nmu == 6){
-	nmu = ze6;
-	strcpy(nmju, "Ze-Valim");
-	printf("jogador 1 escolheu Ze-Valim!");
-	sleep(1);
-	system("cls");
-	
-		printf("Jogador 2, Escolha um nome:\n");
-		printf("\n1) Alan\n2) Linus\n3) Steve\n4) Ada\n5) Neumann\n7) Rob-Ieru\n\nDigite o numero correspondente ao nome escolhido:\n");
-		scanf("%d", &nmd);
-	
-		if(nmd == 1){
-		strcpy(nmjd, "Alan");
-		}
-		if(nmd == 2){
-		strcpy(nmjd, "Linus");
-		}
-		if(nmd == 3){
-		strcpy(nmjd, "Steve");
-		}
-		if(nmd == 4){
-		strcpy(nmjd, "Ada");
-		}
-		if(nmd == 5){
-		strcpy(nmjd, "Neumann");
-		}
-		if(nmd == 7){
-		strcpy(nmjd, "Rob-Ieru");
-		}
-	
-}
 
-//personagem Roberto Ierusalimschy e jogador 2
-if (nmu == 7){
-	nmu = rob7;
-	strcpy(nmju, "Rob-Ieru");
-	printf("jogador 1 escolheu Rob-Ieru!");
-	sleep(1);
-	system("cls");
-	
-		printf("Jogador 2, Escolha um nome:\n");
-		printf("\n1) Alan\n2) Linus\n3) Steve\n4) Ada\n5) Neumann\n6) Ze-Valim\n\nDigite o numero correspondente ao nome escolhido:\n");
-		scanf("%d", &nmd);
-		
-		if(nmd == 1){
-		strcpy(nmjd, "Alan");
-		}
-		if(nmd == 2){
-		strcpy(nmjd, "Linus");
-		}
-		if(nmd == 3){
-		strcpy(nmjd, "Steve");
-		}
-		if(nmd == 4){
-		strcpy(nmjd, "Ada");
-		}
-		if(nmd == 5){
-		strcpy(nmjd, "Neumann");
-		}
-		if(nmd == 6){
-		strcpy(nmjd, "Ze-Valim");
-		}	
-		
-}
-//tudo acima eh so selecao de personagem ou nome, tanto faz
 
-system("cls");
+
+
+
+
+
 
 
 
