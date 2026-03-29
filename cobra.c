@@ -7,8 +7,9 @@
 int main(int argc, char *argv[]) {
 
 srand(time(NULL));
+do{
 
-/*
+system("cls||clear");
 sleep(1);
 printf("Cobras na caixa!!\n\n");
 sleep(2);
@@ -20,7 +21,7 @@ printf("Em uma outra caixa ha uma cobra que vai MATAR voces!!!!!!\n");
 sleep(2);
 printf("Mas nas outras caixas nao tem nada nao =D\nBoa Sorte!\n\n");
 sleep(2);
-*/
+
 
 printf("\n\nJogador 1, Escolha um nome:\n");
 printf("1) Alan\n2) Linus\n3) Steve\n4) Ada\n5) Neumann\n6) Ze-Valim\n7) Rob-Ieru\n\nDigite o numero correspondente ao nome escolhido:\n");
@@ -90,6 +91,11 @@ sleep(2);
 
 int turno = rand() %2; //randomiza entre 0 e 1 a vez dos jogadores
 
+int escolhacaixa;
+
+int caixasabertas[5] = {0,0,0,0,0};
+
+while(1){
 
 if(turno==0){
 	
@@ -191,21 +197,69 @@ if(turno==0){
 	printf("+---+ +---+ +---+ +---+ +---+\n");
 	
 }
+	
+    printf("Escolha uma caixa digitando seu numero correspondente:\n");
+    scanf("%d", &escolhacaixa);
 
-int escolhacaixa;
-printf("escolha uma das caixas digitando o numero correspondente a ela!!");
-scanf("%d", &escolhacaixa);
+    if(escolhacaixa>=1&&escolhacaixa<= 5){
+        escolhacaixa--;
+		        
+        		if(caixasabertas[escolhacaixa]==1){
+        			printf("Essa caixa ja foi escolhida! Porfavor, escolha outra caixa\n");
+        			sleep(2);
+					continue;			
+				}
+        		 caixasabertas[escolhacaixa] = 1;
+        if(escolhacaixa == caixabotao){
+            printf("parabens jogadores! voces venceram\n");
+            sleep(2);
+            break;
+        } 
+        else if(escolhacaixa == caixacobra){
+            printf("ahhh naooo, parece que voces escolheram a cobra e MORRERAM =(\n");
+            sleep(2);
+            break;
+        } 
+        else {
+            printf("opa, parece que esta caixa esta vazia =/\n");
+            turno= (1-turno);
+            sleep(1);
+        }
 
-	if((escolhacaixa-1)==caixabotao){
-	printf("parabens jogadores!voces venceram");
-	} else if((escolhacaixa-1)==caixacobra){
-	printf("ahhh naooo, parece que voces escolheram a cobra e MORRERAM =(");
-	} else {
-	printf("opa, parece que esta caixa esta vazia =/");
-	}
+    } else {
+        printf("Numero invalido! Escolha novamente:\n");
+    }
+}
+
+int saidareset;
+
+while(1){
+    system("cls||clear");
+    printf("Deseja continuar jogando?\n1 - sair\n0 - jogar novamente\n");
+    scanf("%d", &saidareset);
+
+    if(saidareset == 1){
+        break; // sai do jogo
+    } 
+    else if(saidareset == 0){
+        break; // continua o jogo (sai desse while)
+    } 
+    else {
+        printf("Valor invalido! Digite 0 ou 1.\n");
+        sleep(1);
+    }
+}
+
+if(saidareset == 1){
+	printf("Encerrando o jogo...\n");
+    sleep(1);
+	break; // esse break é do DO-WHILE (aqui eh sal, acabou o game) 
+    //felipe eu sei que o game nao pode acabar, so que eu nao sei sincronizar esse codigo todo com o menu do game =)
+}
 
 
 
 
+}while(1); //aqui eh o while do do-while 
 	return 0;
 }
