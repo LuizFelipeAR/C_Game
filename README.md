@@ -77,6 +77,10 @@ O projeto consiste em um sistema em **linguagem C** com três mini-games desenvo
 
 Durante o desenvolvimento do projeto, foram utilizadas fontes externas para estudo, correção e melhoria do código.
 
+## Claude Code (Clude.AI)
+* nanananana nananana
+* ananana ahahahah
+
 ### ChatGPT (OpenAI)
 
 Utilizado para:
