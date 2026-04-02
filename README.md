@@ -46,7 +46,7 @@ O projeto consiste em um sistema em **linguagem C** com três mini-games desenvo
 
 ---
 
-## ▶️ How to use ❓
+## ▶️ Como jogar ❓
 
 1. Compile o arquivo principal em um compilador C
 2. Execute o programa no terminal / console
