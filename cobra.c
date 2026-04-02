@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include <unistd.h>
+#include <windows.h>
 
 int main(int argc, char *argv[]) {
 
@@ -10,17 +10,18 @@ srand(time(NULL));
 do{
 
 system("cls||clear");
-sleep(1);
+
+Sleep(1000);
 printf("Cobras na caixa!!\n\n");
-sleep(2);
+Sleep(2000);
 printf("Ola exploradores! Parece que voces estao presos numa tumba egipicia!\n");
-sleep(2);
+Sleep(2000);
 printf("em frente voces verao cinco caixas, numa delas ha um botao para abrirem a porta e sairem da tumba...\n");
-sleep(4);
+Sleep(4000);
 printf("Em uma outra caixa ha uma cobra que vai MATAR voces!!!!!!\n");
-sleep(2);
+Sleep(2000);
 printf("Mas nas outras caixas nao tem nada nao =D\nBoa Sorte!\n\n");
-sleep(2);
+Sleep(2000);
 
 
 printf("\n\nJogador 1, Escolha um nome:\n");
@@ -40,6 +41,7 @@ while(1){ //aqui eu to criando um loop infinito que so eh break (quebrado) quand
     }
 		else {
         printf("Numero invalido! Digite um numero correspondente a um dos nomes acima:\n");
+        while(getchar() != '\n');
     }
 }
 
@@ -66,6 +68,7 @@ scanf("%d", &pick2);
         break;
     } else {
         printf("Numero invalido ou nome ja escolhido! Digite novamente:\n");
+        while(getchar() != '\n');
     }
 }
 strcpy(jogador2, nomes[pick2 - 1]);
@@ -87,7 +90,7 @@ caixas[caixabotao] = 2;
 
 
 printf("\nVamos %s e %s, voces precisam sair da tumba!\n", jogador1,jogador2);
-sleep(2);
+Sleep(2000);
 
 int turno = rand() %2; //randomiza entre 0 e 1 a vez dos jogadores
 
@@ -106,7 +109,7 @@ if(turno==0){
 	printf("| 1 | | 2 | | 3 | | 4 | | 5 |\n");
 	printf("+---+ +---+ +---+ +---+ +---+\n");
 
-	sleep(1);
+	Sleep(1000);
 	system("cls||clear");
 
 	printf("Agora eh a vez de %s\nESCOLHA UMA DAS CAIXAS\n\n", jogador1);
@@ -114,7 +117,7 @@ if(turno==0){
 	printf("| 5 | | 1 | | 2 | | 3 | | 4 |\n");
 	printf("+---+ +---+ +---+ +---+ +---+\n");
 
-	sleep(1);
+	Sleep(1000);
 	system("cls||clear");
 	
 	printf("Agora eh a vez de %s\nESCOLHA UMA DAS CAIXAS\n\n", jogador1);
@@ -122,7 +125,7 @@ if(turno==0){
 	printf("| 4 | | 5 | | 1 | | 2 | | 3 |\n");
 	printf("+---+ +---+ +---+ +---+ +---+\n");
 
-	sleep(1);
+	Sleep(1000);
 	system("cls||clear");
 
 	printf("Agora eh a vez de %s\nESCOLHA UMA DAS CAIXAS\n\n", jogador1);
@@ -130,7 +133,7 @@ if(turno==0){
 	printf("| 3 | | 4 | | 5 | | 1 | | 2 |\n");
 	printf("+---+ +---+ +---+ +---+ +---+\n");
 
-	sleep(1);
+	Sleep(1000);
 	system("cls||clear");
 
 	printf("Agora eh a vez de %s\nESCOLHA UMA DAS CAIXAS\n\n", jogador1);
@@ -138,7 +141,7 @@ if(turno==0){
 	printf("| 2 | | 3 | | 4 | | 5 | | 1 |\n");
 	printf("+---+ +---+ +---+ +---+ +---+\n");
 
-	sleep(1);
+	Sleep(1000);
 	system("cls||clear");
 
 	printf("Agora eh a vez de %s\nESCOLHA UMA DAS CAIXAS\n\n", jogador1);	
@@ -156,7 +159,7 @@ if(turno==0){
 	printf("| 1 | | 2 | | 3 | | 4 | | 5 |\n");
 	printf("+---+ +---+ +---+ +---+ +---+\n");
 
-	sleep(1);
+	Sleep(1000);
 	system("cls||clear");
 
 	printf("Agora eh a vez de %s\nESCOLHA UMA DAS CAIXAS\n\n", jogador2);
@@ -164,7 +167,7 @@ if(turno==0){
 	printf("| 5 | | 1 | | 2 | | 3 | | 4 |\n");
 	printf("+---+ +---+ +---+ +---+ +---+\n");
 
-	sleep(1);
+	Sleep(1000);
 	system("cls||clear");
 
 	printf("Agora eh a vez de %s\nESCOLHA UMA DAS CAIXAS\n\n", jogador2);	
@@ -172,7 +175,7 @@ if(turno==0){
 	printf("| 4 | | 5 | | 1 | | 2 | | 3 |\n");
 	printf("+---+ +---+ +---+ +---+ +---+\n");
 
-	sleep(1);
+	Sleep(1000);
 	system("cls||clear");
 
 	printf("Agora eh a vez de %s\nESCOLHA UMA DAS CAIXAS\n\n", jogador2);
@@ -180,7 +183,7 @@ if(turno==0){
 	printf("| 3 | | 4 | | 5 | | 1 | | 2 |\n");
 	printf("+---+ +---+ +---+ +---+ +---+\n");
 
-	sleep(1);
+	Sleep(1000);
 	system("cls||clear");
 
 	printf("Agora eh a vez de %s\nESCOLHA UMA DAS CAIXAS\n\n", jogador2);
@@ -188,7 +191,7 @@ if(turno==0){
 	printf("| 2 | | 3 | | 4 | | 5 | | 1 |\n");
 	printf("+---+ +---+ +---+ +---+ +---+\n");
 
-	sleep(1);
+	Sleep(1000);
 	system("cls||clear");
 
 	printf("Agora eh a vez de %s\nESCOLHA UMA DAS CAIXAS\n\n", jogador2);	
@@ -206,28 +209,29 @@ if(turno==0){
 		        
         		if(caixasabertas[escolhacaixa]==1){
         			printf("Essa caixa ja foi escolhida! Porfavor, escolha outra caixa\n");
-        			sleep(2);
+        			Sleep(2000);
 					continue;			
 				}
         		 caixasabertas[escolhacaixa] = 1;
         if(escolhacaixa == caixabotao){
             printf("parabens jogadores! voces venceram\n");
-            sleep(2);
+            Sleep(2000);
             break;
         } 
         else if(escolhacaixa == caixacobra){
             printf("ahhh naooo, parece que voces escolheram a cobra e MORRERAM =(\n");
-            sleep(2);
+            Sleep(2000);
             break;
         } 
         else {
             printf("opa, parece que esta caixa esta vazia =/\n");
             turno= (1-turno);
-            sleep(1);
+            Sleep(1000);
         }
 
     } else {
         printf("Numero invalido! Escolha novamente:\n");
+        while(getchar() != '\n');
     }
 }
 
@@ -246,18 +250,17 @@ while(1){
     } 
     else {
         printf("Valor invalido! Digite 0 ou 1.\n");
-        sleep(1);
+        while(getchar() != '\n');
+        Sleep(1000);
     }
 }
 
 if(saidareset == 1){
 	printf("Encerrando o jogo...\n");
-    sleep(1);
+    Sleep(1000);
 	break; // esse break é do DO-WHILE (aqui eh sal, acabou o game) 
     //felipe eu sei que o game nao pode acabar, so que eu nao sei sincronizar esse codigo todo com o menu do game =)
 }
-
-
 
 
 }while(1); //aqui eh o while do do-while 
