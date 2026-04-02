@@ -90,13 +90,13 @@ Utilizado para:
 ### Playlist utilizada
 
 * **Bro Code - C Programming Tutorial**
-* 🔗 *cole aqui o link da playlist*
+* 🔗 https://youtube.com/playlist?list=PLZPZq0r_RZOOzY_vR4zJM32SqsSInGMwe&si=K0Y6rtcIvnac6CNx
 
 ### Apoio do monitor / mentor
 
-O projeto também contou com auxílio do monitor **Luiz Felipe Araujo dos Reis** na melhoria da lógica e estrutura do código.
+O projeto também contou com auxílio do monitor **Benjamin Suzuki** na melhoria da lógica e estrutura do código.
 
-🔗 *cole aqui o GitHub do Felipe*
+🔗 https://github.com/Benjamin-Yuji-Suzuki
 
 ---
 
