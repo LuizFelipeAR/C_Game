@@ -39,13 +39,16 @@ printf("\n\nGousma 2\n");
 //aqui termina a funcao void
 
 
+
 int main() {
 	int furiaj1=1, furiaj2=1, furiai1=1, furiai2=1;
 	int vez=0;
 	int acao,atacar,slime;
 	char jog1[] = "Jogador 1", jog2[] = "Jogador 2";
 	status(furiaj1,furiaj2,furiai1,furiai2);
-	
+
+
+//laco principal do jogo	
 	while(vez==0) {
 		printf("\n\n-------------------------------------\n");
 		printf("Turno de: %s\n", jog1);
@@ -56,6 +59,7 @@ int main() {
 	   	printf("[2] Dividir\n");
 	   	scanf("%d",&acao);
 	   	
+	   	//laco de acao do jogador 1
 	   	if (acao == 1){
 			
 			   system("cls");
@@ -69,6 +73,7 @@ int main() {
 			   printf("[2] Gousma 2\n");
 			   scanf("%d", &atacar);
 			
+				//escolha de ataque na gousma 1 do jogador 2 (ataque realizado pelo jogador 1)
 			   if(atacar==1) {
 			   	system("cls");
 			   	status(furiaj1,furiaj2,furiai1,furiai2);
@@ -82,11 +87,48 @@ int main() {
 				printf("[2] Gousma 2\n");
 				scanf("%d", &slime);
 				
-					if(slime==1);
+					if(slime==1) {
 					system("cls");
 					furiai1 = furiai1 + furiaj1;
 					status(furiaj1,furiaj2,furiai1,furiai2);  
+					}			  
+					
+					else if(slime==2) {
+					system("cls");
+					furiai1 = furiai1 + furiaj2;
+					status(furiaj1,furiaj2,furiai1,furiai2);  
+					}			  
+					
 			   }
+			   
+			   	//escolha de ataque na gousma 2 do jogador 2 (ataque realizado pelo jogador 1)
+			   else if(atacar==2) {
+			   	system("cls");
+			   	status(furiaj1,furiaj2,furiai1,furiai2);
+				printf("\n\n-------------------------------------\n");
+				printf("Turno de: %s\n", jog1);
+				printf("-------------------------------------\n");
+				
+				
+				printf("Com qual Gousma sua voce deseja utilizar para atacar?\n");
+				printf("[1] Gousma 1\n");
+				printf("[2] Gousma 2\n");
+				scanf("%d", &slime);
+				
+					if(slime==1) {
+					system("cls");
+					furiai2 = furiai2 + furiaj1;
+					status(furiaj1,furiaj2,furiai1,furiai2);  
+					}
+					
+					else if(slime==2) {
+					system("cls");
+					furiai2 = furiai2 + furiaj2;
+					status(furiaj1,furiaj2,furiai1,furiai2);  
+					}	
+					
+			   }
+		
 		   }
 		vez++; // dentro do laco "while(vez==0)"
 	}
