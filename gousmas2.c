@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//aqui comeca a funcao void
 void status(int furiaj1, int furiaj2, int furiai1,int furiai2){
 
 int i;	
@@ -11,30 +12,32 @@ printf("=====================================\n\n");
 
 printf("Jogador 1\n");
 printf("\nGousma 1\n");
-printf("Furia: ");
-for(i=0; i < furiaj1; i++){
-	printf("o ");
-}
+	printf("Furia: ");//laco pra printar as furias do jogador 1 na gousma 1
+	for(i=0; i < furiaj1; i++){
+		printf("o ");
+	}
+	
 printf("\n\nGousma 2\n");
-printf("Furia: ");
-for(i=0; i < furiaj2; i++){
-	printf("o ");
-}
+	printf("Furia: ");//laco pra printar as furias do jogador 1 na gousma 2
+	for(i=0; i < furiaj2; i++){
+		printf("o ");
+	}
 
 printf("\n\n\nJogador 2\n");
-
 printf("\nGousma 1\n");
-printf("Furia: ");
-for(i=0; i < furiai1; i++){
-	printf("o ");
-}
+	printf("Furia: ");//laco pra printar as furias do jogador 2 na gousma 1
+	for(i=0; i < furiai1; i++){
+		printf("o ");
+	}
 
 printf("\n\nGousma 2\n");
-printf("Furia: ");
-for(i=0; i < furiai2; i++){
-	printf("o ");
+	printf("Furia: ");//laco pra printar as furias do jogador 2 na gousma 2
+	for(i=0; i < furiai2; i++){
+		printf("o ");
+	}
 }
-}
+//aqui termina a funcao void
+
 
 int main() {
 	int furiaj1=1, furiaj2=1, furiai1=1, furiai2=1;
@@ -54,6 +57,7 @@ int main() {
 	   	scanf("%d",&acao);
 	   	
 	   	if (acao == 1){
+			
 			   system("cls");
 			   status(furiaj1,furiaj2,furiai1,furiai2);
 			   printf("\n\n-------------------------------------\n");
@@ -64,6 +68,7 @@ int main() {
 			   printf("[1] Gousma 1\n");
 			   printf("[2] Gousma 2\n");
 			   scanf("%d", &atacar);
+			
 			   if(atacar==1) {
 			   	system("cls");
 			   	status(furiaj1,furiaj2,furiai1,furiai2);
@@ -83,7 +88,7 @@ int main() {
 					status(furiaj1,furiaj2,furiai1,furiai2);  
 			   }
 		   }
-		vez++;
+		vez++; // dentro do laco "while(vez==0)"
 	}
 	
 	
