@@ -48,7 +48,6 @@ int main() {
 	status(furiaj1,furiaj2,furiai1,furiai2);
 
 
-//laco caso o turno seja do jogador 1
 	while(ciclo==1){
 		if(furiaj1==0 && furiaj2==0){
 			printf("\n\n%s VENCEU\n\n",jog2);
@@ -60,7 +59,7 @@ int main() {
 			 break;
 		}
 		
-			
+//laco caso o turno seja do jogador 1		
 		while(vez==0) {
 			printf("\n\n-------------------------------------\n");
 			printf("Turno de: %s\n", jog1);
@@ -72,9 +71,9 @@ int main() {
 		   	scanf("%d",&acao);
 		   	
 		   	while(acao!=1 && acao !=2){
-		   			while(getchar() != '\n');
-					scanf("%d", &acao);
-				}
+		   		while(getchar() != '\n');
+				scanf("%d", &acao);
+			}
 		   	
 		   	//laco de acao do jogador 1
 		   	if (acao == 1){
@@ -91,9 +90,9 @@ int main() {
 				   scanf("%d", &atacar);
 				   
 				   while(atacar!=1 && atacar !=2){
-				   	while(getchar() != '\n');
+					while(getchar() != '\n');
 					scanf("%d", &atacar);
-				}
+					}
 				
 					//escolha de ataque na gousma 1 do jogador 2 (ataque realizado pelo jogador 1)
 				   if(atacar==1) {
@@ -112,23 +111,27 @@ int main() {
 					while(slime!=1 && slime !=2){
 						while(getchar() != '\n');
 						scanf("%d", &slime);
-				}
+					}
 					
 						if(slime==1) {
 						system("cls");
 						furiai1 = furiai1 + furiaj1;
-							if(furiai1>5){
+						
+							if(furiai1>5){//zera a mao quando atinge mais de 5 furias
 								furiai1=0;
 							}
+							
 						status(furiaj1,furiaj2,furiai1,furiai2);  
 						}			  
 						
 						else if(slime==2) {
 						system("cls");
 						furiai1 = furiai1 + furiaj2;
-							if(furiai1>5) {
+						
+							if(furiai1>5) {//zera a mao quando atinge mais de 5 furias
 								furiai1=0;
 							}
+							
 						status(furiaj1,furiaj2,furiai1,furiai2);  
 						}
 									  
@@ -152,23 +155,27 @@ int main() {
 					while(slime!=1 && slime !=2){
 						while(getchar() != '\n');
 						scanf("%d", &slime);
-				}
+					}
 					
 						if(slime==1) {
 						system("cls");
 						furiai2 = furiai2 + furiaj1;
-							if(furiai2>5) {
+						
+							if(furiai2>5) {//zera a mao quando atinge mais de 5 furias
 								furiai2=0;
 							}
+							
 						status(furiaj1,furiaj2,furiai1,furiai2);  
 						}
 						
 						else if(slime==2) {
 						system("cls");
 						furiai2 = furiai2 + furiaj2;
+						
 							if(furiai2>5) {
 								furiai2=0;
 							}
+							
 						status(furiaj1,furiaj2,furiai1,furiai2);  
 						}	
 						
@@ -198,6 +205,7 @@ int main() {
     				printf("Essa gousma nao possui furia! Tente novamente.\n");
     				continue; // volta pro menu do turno
 					}
+					
 					system("cls");
 					status(furiaj1,furiaj2,furiai1,furiai2);
 					printf("\n\n-------------------------------------\n");
@@ -213,6 +221,7 @@ int main() {
 						while(getchar() != '\n');
 						scanf("%d", &dividir);
 					}
+					
 					if(dividir < 6) {
 						system("cls");
 						furiaj2 = furiaj2 + dividir;
@@ -227,6 +236,7 @@ int main() {
     				printf("Essa gousma nao possui furia! Tente novamente.\n");
     				continue; // volta pro menu do turno
 					}
+					
 					system("cls");
 					status(furiaj1,furiaj2,furiai1,furiai2);
 					printf("\n\n-------------------------------------\n");
@@ -273,9 +283,9 @@ int main() {
 		   	while(acao!=1 && acao !=2){
 		   		while(getchar() != '\n');
 					scanf("%d", &acao);
-				}
+			}
 		   	
-		   	//laco de acao do jogador 1
+		   	//laco de acao do jogador 2
 		   	if (acao == 1){
 				
 				   system("cls");
@@ -290,11 +300,11 @@ int main() {
 				   scanf("%d", &atacar);
 				   
 				   while(atacar!=1 && atacar !=2){
-				   	while(getchar() != '\n');
+					while(getchar() != '\n');
 					scanf("%d", &atacar);
-				}
+					}
 				
-					//escolha de ataque na gousma 1 do jogador 2 (ataque realizado pelo jogador 1)
+					//escolha de ataque na gousma 1 do jogador 1 (ataque realizado pelo jogador 2)
 				   if(atacar==1) {
 				   	system("cls");
 				   	status(furiaj1,furiaj2,furiai1,furiai2);
@@ -311,30 +321,33 @@ int main() {
 					while(slime!=1 && slime !=2){
 						while(getchar() != '\n');
 						scanf("%d", &slime);
-				}
+					}
 					
 						if(slime==1) {
 						system("cls");
 						furiaj1 = furiaj1 + furiai1;
-							if (furiaj1>5) {
+						
+							if (furiaj1>5) {//zera a mao quando atinge mais de 5 furias
 								furiaj1=0;
 							}
+							
 						status(furiaj1,furiaj2,furiai1,furiai2);  
 						}			  
 						
 						else if(slime==2) {
 						system("cls");
 						furiaj1 = furiaj1 + furiai2;
-							if(furiaj1>5) {
+						
+							if(furiaj1>5) {//zera a mao quando atinge mais de 5 furias
 								furiaj1=0;
 							}
+							
 						status(furiaj1,furiaj2,furiai1,furiai2);  
 						}
-									  
-						
+									  	
 				   }
 				   
-				   	//escolha de ataque na gousma 2 do jogador 2 (ataque realizado pelo jogador 1)
+				   	//escolha de ataque na gousma 2 do jogador 1 (ataque realizado pelo jogador 2)
 				   else if(atacar==2) {
 				   	system("cls");
 				   	status(furiaj1,furiaj2,furiai1,furiai2);
@@ -351,28 +364,32 @@ int main() {
 					while(slime!=1 && slime !=2){
 						while(getchar() != '\n');
 						scanf("%d", &slime);
-				}
+					}
 					
 						if(slime==1) {
 						system("cls");
 						furiaj2 = furiaj2 + furiai1;
-							if(furiaj2>5) {
+						
+							if(furiaj2>5) {//zera a mao quando atinge mais de 5 furias
 								furiaj2=0;
 							}
+							
 						status(furiaj1,furiaj2,furiai1,furiai2);  
 						}
 						
 						else if(slime==2) {
 						system("cls");
 						furiaj2 = furiaj2 + furiai2;
-							if(furiaj2>5) {
+						
+							if(furiaj2>5) {//zera a mao quando atinge mais de 5 furias
 								furiaj2=0;
 							}
+							
 						status(furiaj1,furiaj2,furiai1,furiai2);  
-						}	
-						
+						}
+								
 				   }
-			
+				   
 			   }
 			else if (acao == 2){
 				system("cls");
@@ -394,10 +411,12 @@ int main() {
 				
 				
 				if(slime==1) {
+					
 					if(furiai1 == 0) {
     					printf("Essa gousma nao possui furia! Tente novamente.\n");
     					continue; // volta pro menu do turno
 					}
+					
 					system("cls");
 					status(furiaj1,furiaj2,furiai1,furiai2);
 					printf("\n\n-------------------------------------\n");
@@ -413,20 +432,22 @@ int main() {
 						while(getchar() != '\n');
 						scanf("%d", &dividir);
 					}
+					
 					if(dividir < 6) {
 						system("cls");
 						furiai2 = furiai2 + dividir;
 						furiai1 = furiai1 - dividir;
 						status(furiaj1,furiaj2,furiai1,furiai2);
-						
 					}			
 				}
 				
 				else if(slime==2) {
+					
 					if(furiai2 == 0) {
     				printf("Essa gousma nao possui furia! Tente novamente.\n");
     				continue; // volta pro menu do turno
 					}
+					
 					system("cls");
 					status(furiaj1,furiaj2,furiai1,furiai2);
 					printf("\n\n-------------------------------------\n");
@@ -442,17 +463,17 @@ int main() {
 						while(getchar() != '\n');
 						scanf("%d", &dividir);
 					}
+					
 					if(dividir < 6) {
 						system("cls");
 						furiai1 = furiai1 + dividir;
 						furiai2 = furiai2 - dividir;
-						status(furiaj1,furiaj2,furiai1,furiai2);
-						
+						status(furiaj1,furiaj2,furiai1,furiai2);	
 					}
 				}		
 			}
-			vez--; // dentro do laco "while(vez==0)"
+			vez--; // dentro do laco "while(vez==1)", serve pra alternancia de turnos
 		}	
 	
-	}
+	}//fecha o laco while(ciclo)
 }
